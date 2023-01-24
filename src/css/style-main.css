@@ -1,0 +1,25 @@
+:root {
+  --acc-color: #50c8cc;
+  --white-color: #f0f0f0;
+  --white2-color: #c7c7c7;
+  --black-color: #090711;
+  --black2-color: #110f1a;
+}
+
+html,
+body {
+  overflow-anchor: none;
+  touch-action: manipulation;
+  scroll-behavior: smooth;
+  width: 100%;
+  /* height: 100vh; */
+  /* height: fill-available;
+  height: -webkit-fill-available; */
+  overflow-x: hidden;
+  scrollbar-width: none;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  -webkit-tap-highlight-color: #00000000;
+}
