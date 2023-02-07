@@ -1,35 +1,31 @@
 <script>
-	// import { page } from '$app/stores';
-	// import logo from '../asset/svg/logo_fill_mono.svg';
 	import { BASE_URL } from "../consts";
+
+	export let currentURL;
+	let current = 'foo';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="{BASE_URL}/">
-			TOM
-		</a>
+		<a href="{BASE_URL}/"> {currentURL} </a>
 	</div>
 
 	<nav>
 		<ul>
 			<li>
-				<a href="{BASE_URL}/portfolio">PORTFOLIO</a>
+				<a href="{BASE_URL}/" class:active="{currentURL === "/tomfutang/"}">home</a>
 			</li>
 			<li>
-				<a href="{BASE_URL}/about">ABOUT</a>
+				<a href="{BASE_URL}/about" class:active="{currentURL === "/tomfutang/about"}">about</a>
 			</li>
 			<li>
-				<a href="{BASE_URL}/contact">CONTACT</a>
+				<a href="{BASE_URL}/portfolio" class:active="{currentURL === "/tomfutang/portfolio"}">portfolio</a>
+			</li>
+			<li>
+				<a href="{BASE_URL}/contact" class:active="{currentURL === "/tomfutang/contact"}">contact</a>
 			</li>
 		</ul>
 	</nav>
-
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<!-- <img src={github} alt="GitHub" /> -->
-		</a>
-	</div>
 </header>
 
 <style>
@@ -39,7 +35,7 @@
 		justify-content: space-between;
 	}
 	.corner {
-		width: 35em;
+		width: 10em;
 		height: var(--header-height);
 	}
 	.corner a {
@@ -52,7 +48,7 @@
 	}
 	nav {
 		display: flex;
-		width: 100%;
+		margin-right: 3em;
 	}
 	ul {
 		position: relative;
@@ -60,7 +56,7 @@
 		margin: 0;
 		height: var(--header-height);
 		display: flex;
-		gap: 8em;
+		gap: 3em;
 		justify-content: center;
 		align-items: center;
 		list-style: none;
@@ -84,5 +80,8 @@
 	}
 	a:hover {
 		color: var(--acc-color);
+	}
+	a.active {
+		color: red;
 	}
 </style>

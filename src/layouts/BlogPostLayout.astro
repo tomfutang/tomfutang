@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props;
   </head>
   <body>
     <main>
-      <Header/>
+      <Header currentURL={Astro.url.pathname} />
       <article>
         <h1>{frontmatter.title}</h1>
         <h2>Post author: {frontmatter.author}</h2>

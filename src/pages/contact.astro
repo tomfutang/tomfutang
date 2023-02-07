@@ -10,7 +10,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   </head>
   <body>
     <main>
-      <Header/>
+      <Header currentURL={Astro.url.pathname} />
       <h1>My contact</h1>
       <h2>Follow me on...</h2>
     </main>

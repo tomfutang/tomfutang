@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.svelte';
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Header from "../components/Header.svelte";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -13,8 +13,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<main>
-			<Header/>
+			<Header currentURL={Astro.url.pathname} />
 			<h1>Hello, Tom! Yes, I'm still working on your site</h1>
+			<div class="slide-show"></div>
 		</main>
+		<style>
+			body {
+				min-height: 100vh;
+			}
+			main {
+				display: flex;
+				flex-direction: column;
+			}
+			.slide-show {
+				display: flex;
+				background-color: aquamarine;
+				height: 100px;
+			}
+		</style>
 	</body>
 </html>
