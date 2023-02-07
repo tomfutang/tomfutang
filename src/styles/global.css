@@ -1,10 +1,26 @@
 :root {
+  --font-body: Arial,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  ;
   --acc-color: #76c066;
   --white-color: #f8f8f8;
   --white2-color: #c7c7c7;
   --black-color: #090711;
   --black2-color: #110f1a;
   --color-text: #0a0a0a;
+  color: var(--black-color);
+  font-family: var(--font-body);
+  font-weight: 600;
+  -webkit-tap-highlight-color: #00000000;
 }
 
 html,
@@ -12,15 +28,13 @@ body {
   overflow-anchor: none;
   touch-action: manipulation;
   scroll-behavior: smooth;
-  width: 100%;
-  /* height: 100vh; */
-  /* height: fill-available;
-  height: -webkit-fill-available; */
-  overflow-x: hidden;
-  scrollbar-width: none;
+  min-height: 100vh;
+  margin: 0;
   background-color: var(--white-color);
   color: var(--black-color);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  -webkit-tap-highlight-color: #00000000;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
