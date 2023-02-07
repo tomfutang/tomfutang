@@ -1,7 +1,10 @@
 ---
-import Header from '../components/Header.svelte';
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Header from "../components/Header.svelte";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, BASE_URL } from "../consts";
+
+import { Image } from "@astrojs/image/components";
+import image1 from '../../public/sketch.png';
 ---
 
 <html lang="en">
@@ -10,9 +13,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   </head>
   <body>
     <main>
-      <Header/>
+      <Header />
       <h1>My work?</h1>
-      <img src="/portfolio/sketch.png" />
+      <Image src={image1} width={1280} aspectRatio="16:9" alt="descriptive text" />
     </main>
   </body>
 </html>

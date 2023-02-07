@@ -1,11 +1,12 @@
 <script>
 	// import { page } from '$app/stores';
 	// import logo from '../asset/svg/logo_fill_mono.svg';
+	import { BASE_URL } from "../consts";
 </script>
 
 <header>
 	<div class="corner">
-		<a href="/tomfutang/">
+		<a href="{BASE_URL}/">
 			TOM
 		</a>
 	</div>
@@ -13,13 +14,13 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="/tomfutang/portfolio">PORTFOLIO</a>
+				<a href="{BASE_URL}/portfolio">PORTFOLIO</a>
 			</li>
 			<li>
-				<a href="/tomfutang/about">ABOUT</a>
+				<a href="{BASE_URL}/about">ABOUT</a>
 			</li>
 			<li>
-				<a href="/tomfutang/contact">CONTACT</a>
+				<a href="{BASE_URL}/contact">CONTACT</a>
 			</li>
 		</ul>
 	</nav>
