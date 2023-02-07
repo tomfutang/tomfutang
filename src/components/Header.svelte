@@ -2,7 +2,7 @@
 	import { BASE_URL } from "../consts";
 
 	export let currentURL;
-	let current = 'foo';
+	let current = "foo";
 </script>
 
 <header>
@@ -13,16 +13,27 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="{BASE_URL}/" class:active="{currentURL === "/tomfutang/"}">home</a>
+				<a href="{BASE_URL}/" class:active={currentURL === "/tomfutang/"}
+					>home</a
+				>
 			</li>
 			<li>
-				<a href="{BASE_URL}/about" class:active="{currentURL === "/tomfutang/about"}">about</a>
+				<a
+					href="{BASE_URL}/about"
+					class:active={currentURL === "/tomfutang/about"}>about</a
+				>
 			</li>
 			<li>
-				<a href="{BASE_URL}/portfolio" class:active="{currentURL === "/tomfutang/portfolio"}">portfolio</a>
+				<a
+					href="{BASE_URL}/portfolio"
+					class:active={currentURL === "/tomfutang/portfolio"}>portfolio</a
+				>
 			</li>
 			<li>
-				<a href="{BASE_URL}/contact" class:active="{currentURL === "/tomfutang/contact"}">contact</a>
+				<a
+					href="{BASE_URL}/contact"
+					class:active={currentURL === "/tomfutang/contact"}>contact</a
+				>
 			</li>
 		</ul>
 	</nav>
@@ -40,7 +51,7 @@
 	}
 	.corner a {
 		justify-content: center;
-		width: 100%;
+		width: fit-content;
 		color: var(--acc-color);
 	}
 	.corner:hover a {
@@ -67,9 +78,9 @@
 	}
 	a {
 		display: flex;
-		height: 100%;
 		align-items: center;
-		padding: 0 0.5rem;
+		align-items: flex-end;
+		height: 100%;
 		color: var(--color-text);
 		font-weight: 700;
 		font-size: 0.8rem;
@@ -82,6 +93,18 @@
 		color: var(--acc-color);
 	}
 	a.active {
-		color: red;
+		font-weight: 800;
+	}
+	a.active::before {
+		--dot-size: 7px;
+		transform: translateX(-50%);
+		border-radius: 100%;
+		position: absolute;
+		background: var(--black-color);
+		left: 50%;
+		bottom: -1em;
+		content: "";
+		height: var(--dot-size);
+		width: var(--dot-size);
 	}
 </style>
