@@ -1,0 +1,25 @@
+---
+import Header from '../components/Header.svelte';
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main>
+      <Header/>
+      <article>
+        <h1>{frontmatter.title}</h1>
+        <h2>Post author: {frontmatter.author}</h2>
+        <p>{frontmatter.description}</p>
+        <hr>
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
