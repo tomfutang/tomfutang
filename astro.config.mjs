@@ -5,4 +5,6 @@ import svelte from '@astrojs/svelte';
 export default defineConfig({
 	// Enable Svelte to support Svelte components.
 	integrations: [svelte()],
+	site: 'https://tomfutang.github.io/',
+	base: '/tomfutang',
 });

@@ -1,7 +1,9 @@
 ---
 // Component Imports
 import Counter from '../components/Counter.svelte';
-
+import Header from '../components/Header.svelte';
+import '../styles/global.css';
+import '../styles/normalize.css'
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -9,22 +11,14 @@ import Counter from '../components/Counter.svelte';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
 	</head>
 	<body>
 		<main>
+			<Header/>
 			<Counter client:visible>
 				<h1>Hello, Svelte!</h1>
 			</Counter>
