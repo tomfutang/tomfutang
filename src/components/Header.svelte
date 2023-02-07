@@ -2,7 +2,6 @@
 	import { BASE_URL } from "../consts";
 
 	export let currentURL;
-	let current = "foo";
 </script>
 
 <header>
