@@ -1,0 +1,18 @@
+---
+import Header from '../components/Header.svelte';
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main>
+      <Header/>
+      <h1>My contact</h1>
+      <h2>Follow me on...</h2>
+    </main>
+  </body>
+</html>
