@@ -16,7 +16,7 @@
 			</li>
 			<li>
 				<a
-					href="{BASE_URL}/about/aa"
+					href="{BASE_URL}/about/"
 					class:active={currentURL === BASE_URL + "/about/"}>about</a
 				>
 			</li>
