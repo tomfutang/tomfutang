@@ -12,26 +12,24 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="{BASE_URL}/" class:active={currentURL === "/tomfutang/"}
-					>home</a
+				<a href="{BASE_URL}/" class:active={currentURL === BASE_URL + "/"}>home</a>
+			</li>
+			<li>
+				<a
+					href="{BASE_URL}/about/"
+					class:active={currentURL === BASE_URL + "/about/"}>about</a
 				>
 			</li>
 			<li>
 				<a
-					href="{BASE_URL}/about"
-					class:active={currentURL === "/tomfutang/about"}>about</a
+					href="{BASE_URL}/portfolio/"
+					class:active={currentURL === BASE_URL + "/portfolio/"}>portfolio</a
 				>
 			</li>
 			<li>
 				<a
-					href="{BASE_URL}/portfolio"
-					class:active={currentURL === "/tomfutang/portfolio"}>portfolio</a
-				>
-			</li>
-			<li>
-				<a
-					href="{BASE_URL}/contact"
-					class:active={currentURL === "/tomfutang/contact"}>contact</a
+					href="{BASE_URL}/contact/"
+					class:active={currentURL === BASE_URL + "/contact/"}>contact</a
 				>
 			</li>
 		</ul>
